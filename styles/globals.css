@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navBtn {
+    @apply hidden h-6 md:inline-flex cursor-pointer
+    hover:scale-125 transition-all duration-150 ease-out;
+  }
+  .storyPop {
+    @apply hover:scale-110 transition-all duration-150 ease-out;
+  }
+
+  .btn {
+    @apply h-7 hover:scale-125 cursor-pointer
+    transition-all duration-150 ease-out;
+  }
+
+  .instagram-logo {
+    background-position: 0 -130px;
+    height: 51px;
+    width: 175px;
+    background-image: url(https://bit.ly/3v2LT17);
+  }
+
+  .facebook-logo {
+    background-position: -414px -259px;
+    background-image: url(https://bit.ly/3v2LT17);
+    height: 16px;
+    width: 16px;
+  }
+
+  .apple-store-logo {
+    background-position: -132px -182px;
+    height: 42px;
+    width: 128px;
+    background-image: url(https://bit.ly/3v2LT17);
+  }
+  .google-store-logo {
+    background-position: 0 -182px;
+    height: 42px;
+    width: 130px;
+    background-image: url(https://bit.ly/3v2LT17);
+  }
+
+  .darkBg {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .changePic {
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  .pb-full {
+    padding-bottom: 100%;
+  }
+
+  /* hide search icon on search focus */
+  .search-bar:focus + .fa-search {
+    display: none;
+  }
+
+
+  /* For comment Section */
+  .show-comment {
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(16, 13, 13, 0.4);
+  }
+
+  .comment-container {
+    display: flex;
+    width: 70%;
+    background-color: white;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    height: 500px;
+  }
+
+  .post-pic {
+    background-color: black;
+    display: flex;
+    align-items: center;
+  }
+
+  .post-pic img {
+    object-fit: contain;
+    width: 700px;
+  }
+
+  .details {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .comment-section {
+    flex-grow: 4;
+    text-align: left
+  }
+
+  .close-comment {
+    position: fixed;
+    top: 18%;
+    right: 16%;
+
+  }
+
+
+  @media screen and (min-width: 768px) {
+    .post:hover .overlay {
+      display: block;
+    }
+  }
+}
