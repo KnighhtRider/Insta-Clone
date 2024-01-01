@@ -3,6 +3,8 @@ import Image from "next/image";
 import Instagram from "../assets/Instagram.jpeg";
 import logo from "../assets/logo.png";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
+
 
 import {
   SearchIcon,
@@ -142,4 +144,5 @@ function Header() {
   );
 }
 
-export default Header;
+export default dynamic (() => Promise.resolve(Header), {ssr: false})
+

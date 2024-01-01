@@ -3,6 +3,8 @@ import Image from 'next/image'
 // import default_profile from '../assets/default_profile.webp'
 import { useRouter } from 'next/navigation'
 // const router = useRouter();
+import dynamic from "next/dynamic";
+
 
 function MiniProfile() {
 
@@ -62,4 +64,4 @@ function MiniProfile() {
   )
 }
 
-export default MiniProfile
+export default dynamic (() => Promise.resolve(MiniProfile), {ssr: false})

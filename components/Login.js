@@ -3,6 +3,8 @@ import Image from "next/image";
 import slider from '../assets/slider-login.png';
 import { useRouter } from 'next/navigation'
 import { toast } from 'react-toastify';
+import dynamic from "next/dynamic";
+
 
 
 function Login() {
@@ -135,4 +137,5 @@ function Login() {
   );
 }
 
-export default Login;
+export default dynamic (() => Promise.resolve(Login), {ssr: false})
+

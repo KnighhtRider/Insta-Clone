@@ -4,6 +4,8 @@ import Posts from './Posts'
 import MiniProfile from './MiniProfile'
 import Suggestions from './Suggestions'
 import MobileNavbar from './MobileNavbar'
+import dynamic from "next/dynamic"
+
 
 function Feed() {
 
@@ -29,4 +31,4 @@ function Feed() {
   )
 }
 
-export default Feed
+export default dynamic (() => Promise.resolve(Feed), {ssr: false})

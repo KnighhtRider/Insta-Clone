@@ -18,10 +18,10 @@ export default function Home() {
     }
   }, [token, router]);
 
-  if (!token) {
-    // You can show a loading state here while redirecting
-    return <div>Loading...</div>;
-  }
+  // if (!token) {
+  //   // You can show a loading state here while redirecting
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <div className='h-screen overflow-y-scroll scrollbar-hide'>
