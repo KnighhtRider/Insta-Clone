@@ -39,7 +39,7 @@ function Signup() {
     }
     
     /* Sending data to server */
-    fetch('http://localhost:5000/signup', {
+    fetch('https://insta-clone-97fo.vercel.app/signup', {
       method:'post',
       headers:{
         'Content-Type': 'application/json'

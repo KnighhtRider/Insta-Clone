@@ -23,7 +23,7 @@ function Posts() {
 
   useEffect(() => {
     /* Fetch all posts */
-    fetch("http://localhost:5000/createpost", {
+    fetch("https://insta-clone-97fo.vercel.app/createpost", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -45,7 +45,7 @@ function Posts() {
   };
 
   const likePost = (id) => {
-    fetch("http://localhost:5000/like", {
+    fetch("https://insta-clone-97fo.vercel.app/like", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +70,7 @@ function Posts() {
   };
 
   const unlikePost = (id) => {
-    fetch("http://localhost:5000/unlike", {
+    fetch("https://insta-clone-97fo.vercel.app/unlike", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -96,7 +96,7 @@ function Posts() {
 
   /* comment function */
   const makeComment = (text, id) => {
-    fetch("http://localhost:5000/comment", {
+    fetch("https://insta-clone-97fo.vercel.app/comment", {
       method: "put",
       headers: {
         "Content-Type": "application/json",

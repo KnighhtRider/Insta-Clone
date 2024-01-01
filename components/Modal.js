@@ -46,7 +46,7 @@ function Modal() {
 
     if (url) {
       /* saving post to mongodb */
-      fetch("http://localhost:5000/createpost", {
+      fetch("https://insta-clone-97fo.vercel.app/createpost", {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
