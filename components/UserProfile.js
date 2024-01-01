@@ -17,7 +17,9 @@ function UserProfile() {
 
   const [isFollow, setIsFollow] = useState(false)
 
-  const loggedUser =  JSON.parse(localStorage.getItem('user'))._id
+
+ 
+  
 
   /* To Follow User */
   const followUser = (userId) => {
@@ -78,7 +80,6 @@ function UserProfile() {
       });
   }, [isFollow]);
 
-  const isProfile = (user._id == loggedUser)
 
   return (
     <div>
@@ -109,7 +110,7 @@ function UserProfile() {
                 </span>
 
                 {/* <!-- follow button --> */}
-                { !isProfile &&
+                
                   <button
                     className="bg-blue-500 px-2 py-1 text-white font-semibold text-sm rounded block text-center sm:inline-block hover:bg-blue-400"
                     onClick={() => {
@@ -123,7 +124,7 @@ function UserProfile() {
                   >
                     {isFollow ? 'Unfollow' : 'Follow'}
                   </button>
-                }
+                
               </div>
 
               {/* <!-- post, following, followers list for medium screens --> */}
