@@ -3,7 +3,7 @@ import Image from "next/image";
 import slider from '../assets/slider-login.png';
 import { useRouter } from 'next/navigation'
 import { toast } from 'react-toastify';
-import dynamic from "next/dynamic";
+import dynamic from "next/dynamic"; 
 
 
 

@@ -14,6 +14,10 @@ router.get('/signup', (req, res) => {
   res.send('<h1>I am Get Request From Sign Up.</h1>')
 })
 
+router.get('/', (req, res) => {
+  res.send('<h1>Welcome To Instagram Clone!.</h1>')
+})
+
 
 router.post('/signup', (req, res) => {
   const { name, userName, email, password } = req.body;
