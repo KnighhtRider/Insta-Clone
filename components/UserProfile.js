@@ -23,7 +23,7 @@ function UserProfile() {
 
   /* To Follow User */
   const followUser = (userId) => {
-    fetch('https://insta-clone-97fo.vercel.app/follow', {
+    fetch('http://localhost:5000/follow', {
       method: 'put',
       headers: {
         'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ function UserProfile() {
 
   /* To Unfollow User */
   const unfollowUser = (userId) => {
-    fetch('https://insta-clone-97fo.vercel.app/unfollow', {
+    fetch('http://localhost:5000/unfollow', {
       method: 'put',
       headers: {
         'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function UserProfile() {
 
   /* Fetch user and its posts */
   useEffect(() => {
-    fetch(`https://insta-clone-97fo.vercel.app/user/${userid}`, {
+    fetch(`http://localhost:5000/user/${userid}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },

@@ -20,7 +20,7 @@ function MiniProfile() {
 
 
     /* Fetch all posts */
-    fetch(`https://insta-clone-97fo.vercel.app/user/${JSON.parse(localStorage.getItem('user'))._id}`, {
+    fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem('user'))._id}`, {
       headers: {
         'Authorization': "Bearer " + localStorage.getItem("jwt")
       }

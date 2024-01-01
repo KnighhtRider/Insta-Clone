@@ -29,7 +29,7 @@ function ProfilePic({ changeProfile }) {
 
   const postPic = () => {
      /* Saving profile pic to mongodb */
-      fetch("https://insta-clone-97fo.vercel.app/uploadProfilePic", {
+      fetch("http://localhost:5000/uploadProfilePic", {
       method: 'put',
       headers: {
         'Content-Type': 'application/json',

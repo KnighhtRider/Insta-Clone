@@ -29,7 +29,7 @@ function MobileNavbar() {
 
 
     /* Fetch all posts */
-    fetch(`https://insta-clone-97fo.vercel.app/user/${JSON.parse(localStorage.getItem('user'))._id}`, {
+    fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem('user'))._id}`, {
       headers: {
         'Authorization': "Bearer " + localStorage.getItem("jwt")
       }
@@ -48,7 +48,7 @@ function MobileNavbar() {
 
   return (
 
-    <div class="fixed bottom-0 w-full left-0 z-50 h-10 pt-1 bg-white border-t border-gray-200 md:hidden  dark:border-gray-600">
+    <div className="fixed bottom-0 w-full left-0 z-50 h-10 pt-1 bg-white border-t border-gray-200 md:hidden  dark:border-gray-600">
 
       <div className='flex items-center justify-center space-x-14 '>
 
