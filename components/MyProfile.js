@@ -26,7 +26,7 @@ function MyProfile() {
 
 
     /* Fetch all posts */
-    fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem('user'))._id}`, {
+    fetch(`https://insta-clone-coral-three.vercel.app/user/${JSON.parse(localStorage.getItem('user'))._id}`, {
       headers: {
         'Authorization': "Bearer " + localStorage.getItem("jwt")
       }

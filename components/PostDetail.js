@@ -20,7 +20,7 @@ function PostDetail({ item, toggleDetails }) {
 
   const removePost = (postId) => {
     if (window.confirm('Do you really want to delete this post ? ')) {
-      fetch(`http://localhost:5000/deletepost/${postId}`, {
+      fetch(`https://insta-clone-coral-three.vercel.app/deletepost/${postId}`, {
         method: 'delete',
         headers: {
           "Authorization": "Bearer " + localStorage.getItem("jwt")
