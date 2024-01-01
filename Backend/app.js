@@ -5,7 +5,13 @@ const cors = require('cors')
 
 const mongoose = require('mongoose');
 const { mongoUrl } = require('./secrets/keys')
-app.use(cors())
+app.use(cors(
+  {
+    origin: ["https://insta-clone-pi-rosy.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+))
 
 /* user models import */
 require('./models/model')
