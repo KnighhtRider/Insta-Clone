@@ -5,6 +5,15 @@ const cors = require('cors')
 
 const mongoose = require('mongoose');
 const { mongoUrl } = require('./secrets/keys')
+
+// Middleware to enable CORS
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://insta-clone-pi-rosy.vercel.app'); // Allow requests from any origin
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
+
 app.use(cors(
   {
     origin: ["https://insta-clone-pi-rosy.vercel.app"],
